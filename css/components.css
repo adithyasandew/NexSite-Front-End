@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+header {
+    width: 100%;
+    /* background-color: rgb(71, 69, 69); */
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 60px;
+    margin: 10px 1rem 0 1rem;
+}
+
+.navlinks {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlinks ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly
+
+}
+
+.navlinks ul li {
+    padding: 0 2rem;
+}
+
+.navlinks ul li:hover {
+    position: relative;
+    transition: 0.6s;
+}
+
+.navlinks ul li:hover a {
+    color: #4CAF50;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: 0.6s;
+}
+
+.navlinks ul li a {
+    text-decoration: none;
+    transition: 0.6s;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navlinks {
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .navlinks ul.links {
+        display: none;
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        right: 0;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        z-index: 1000;
+    }
+
+    .navlinks ul.links.active {
+        display: flex;
+    }
+
+    .navlinks ul li {
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 1rem;
+        z-index: 1001;
+    }
+    
+.menu-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle line {
+    transition: transform 0.3s ease;
+}
+
+/* .menu-toggle.active line:first-child {
+    transform: translate(0, 4px) rotate(45deg);
+    transform-origin: center;
+}
+
+.menu-toggle.active line:last-child {
+    transform: translate(0, -4px) rotate(-45deg);
+    transform-origin: center;
+} */
+}
