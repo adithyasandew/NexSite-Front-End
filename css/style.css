@@ -26,16 +26,14 @@
     background-color: var(--background-color);
     background-size: cover;
     background-repeat: no-repeat;
-    /* object-fit: fill; */
 }
 
 /* Home Page */
 .container {
     width: 100%;
-    /* background-color: red; */
     display: flex;
     justify-content: center;
-    /* margin-top: 10px; */
+
 }
 
 /* Hero Section */
@@ -48,7 +46,7 @@
     width: 100%;
     height: 700px;
     background-color: black;
-    /* border-radius: 35px; */
+
 }
 
 .text-content {
@@ -109,7 +107,7 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
-    /* border-radius: 35px; */
+
     opacity: 0.6;
     z-index: 0;
 }
@@ -122,7 +120,7 @@
 /* Welcome Section */
 .welcome-container {
     width: 100%;
-    /* background-color: red; */
+
     display: flex;
     justify-content: center;
     background-color: rgb(230, 230, 230);
@@ -144,7 +142,6 @@
 .box .image {
     flex: 1;
     height: auto;
-    /* object-fit:contain; */
 }
 
 .box .image img {
@@ -158,13 +155,9 @@
     line-height: 1.4;
     font-size: 1.3em;
     color: rgba(255, 72, 0, 0.918);
-    ;
     font-weight: bold;
-    /* margin-left: 1rem; */
     margin: 0 auto;
     box-sizing: border-box;
-    /* background-color: #3a1515; */
-    /* max-width: 100%; */
 
 }
 
@@ -199,7 +192,6 @@
 .welcome-msg button:hover {
     background-color: rgba(255, 72, 0, 0.918);
     color: #000000;
-    /* transform: scale(1.05); */
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(190, 118, 84, 0.4);
     cursor: pointer;
@@ -919,7 +911,7 @@
 
     .welcome-container .image {
         width: 100%;
-        /* margin-bottom: 1rem; */
+     
     }
 
     .welcome-container .image img {
@@ -961,8 +953,8 @@
     .about-hero-content h1 {
         font-size: 2.5rem;
     }
-    
-    .about-hero-section{
+
+    .about-hero-section {
         height: 300px;
     }
 
@@ -977,7 +969,6 @@
     }
 
     .stats {
-        /* flex-direction: column; */
         gap: 2rem;
     }
 

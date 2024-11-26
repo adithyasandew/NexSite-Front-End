@@ -23,6 +23,35 @@ async function loadHeader() {
     }
 }
 
+// Footer loading function
+async function loadFooter() {
+    try {
+        // Fetch the footer template
+        const response = await fetch('components/footer.html');
+        const text = await response.text();
+        
+        // Create a temporary container
+        const temp = document.createElement('div');
+        temp.innerHTML = text;
+        
+        // Get the template content
+        const template = temp.querySelector('#footer-template');
+        
+        // Clone and insert the template content
+        const clone = template.content.cloneNode(true);
+        document.querySelector('#footer-container').appendChild(clone);
+        
+    } catch (error) {
+        console.error('Error loading footer:', error);
+    }
+}
+
+// Single DOMContentLoaded event listener to load both header and footer
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadHeader();
+    await loadFooter();
+});
+
 // Initialize menu toggle functionality
 function initMenuToggle() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -73,6 +102,3 @@ function initMenuToggle() {
         }
     });
 }
-
-// Load the header when the document is ready
-document.addEventListener('DOMContentLoaded', loadHeader);
